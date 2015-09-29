@@ -26,9 +26,9 @@ Events supported are beforeItemAdd, itemAdded, beforeItemRemove and itemRemoved.
 Corresponding events in ractive template are tagsbeforeitemadd, tagsitemadded, tagsbeforeitemremove and tagsitemremoved
 
 For example:
-'''html
+```html
 <input name="tags" decorator="tagsinput" on-tagsintemadded="ItemAdded"/>
-'''
+```
 
 Decorator "tagsinput" comes from [decorator plugin](https://github.com/Performante/ractive-decorators-bootstraptags/)
 
