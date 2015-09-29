@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang='en-GB'>
+<head>
+	<meta charset='utf-8'>
+	<title>Ractive.js bootstraptags event plugin</title>
+
+	<!-- CSS -->
+	<link href='http://fonts.googleapis.com/css?family=Voltaire' rel='stylesheet' type='text/css'>
+	<link rel='stylesheet' href='demo/main.css'>
+
+	<!-- TODO add styles specific to this demo -->
+	<style type='text/css'>
+
+	</style>
+</head>
+
+<body>
+
+	<!-- if the project is on GitHub, add a fork me button! -->
+	<a class='forkme' href='https://github.com/Performante/ractive-events-bootstraptags/'>Fork me on GitHub</a>
+
+	<header>
+		<h1>Ractive.js bootstraptags event plugin</h1>
+		<p class='strap'>
+			<span class='download'>download: <a href='https://raw.githubusercontent.com/Performante/ractive-events-bootstraptags/master/ractive-events-bootstraptags.js'>
+				ractive-events-bootstraptags.js</a></span>
+			<span class='more-plugins'>more plugins at <a href='http://docs.ractivejs.org/latest/plugins'>docs.ractivejs.org/latest/plugins</a></span>
+		</p>
+	</header>
+
+	<main>
+		<p>
+			Small events plugin, that adds event functionality of
+			<a href="https://github.com/timschlechter/bootstrap-tagsinput">Bootstrap Tags Input</a> plugin
+		</p>
+		<p>Supports events: beforeItemAdd, itemAdded, beforeItemRemove and itemRemoved</p>
+		<p>Decorator "tagsinput" comes from <a href="https://github.com/Performante/ractive-decorators-bootstraptags/">decorator plugin</a></p>
+
+		<!--<div id='demo' class='clearfix'></div>-->
+
+		<pre id='demo-template-view' class='prettyprint lang-html'></pre>
+		<pre id='demo-code-view' class='prettyprint lang-js'></pre>
+	</main>
+
+	<!-- add additional info such as your homepage here, if you want -->
+	<footer>
+		<p>Copyright &copy; 2015 Mateusz Cyraniak. Licensed MIT</p>
+	</footer>
+
+	<!-- Demo template -->
+	<script id='demo-template' type='text/ractive'>
+		<input name="tags" decorator="tagsinput"
+			on-tagsitemadded="ItemAdded" on-tagsbeforeitemremove="BeforeItemRemove"/>
+	</script>
+
+	<!-- Dependencies -->
+	<script src='vendor/ractive/ractive-legacy.js'></script>
+	<script src='src/ractive-events-bootstraptags.js'></script>
+
+	<!-- Demo code -->
+	<script id='demo-code'>
+		ractive = new Ractive({
+			//...
+		});
+
+		ractive.on({
+			'ItemAdded': function (e) {
+				var item = e.original.item;
+				//do your stuff
+			},
+			'BeforeItemRemove': function (e) {
+				var item = e.original.item;
+				//do your stuff
+			}
+		});
+	</script>
+
+	<!-- Insert code into the page -->
+	<script src='demo/prettify.js'></script>
+	<script src='demo/demo.js'></script>
+</body>
+</html>

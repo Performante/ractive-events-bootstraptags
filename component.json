@@ -1,0 +1,16 @@
+{
+	"name": "ractive-events-bootstraptags",
+	"repo": "git://github.com/Performante/ractive-events-bootstraptags.git",
+	"description": "ractive-events-bootstraptags",
+	"version": "0.1.0",
+	"keywords": [],
+	"dependencies": {
+		"ractivejs/ractive": "^0.5.4"
+	},
+	"development": {},
+	"license": "MIT",
+	"main": "ractive-events-bootstraptags.js",
+	"scripts": [
+		"ractive-events-bootstraptags.js"
+	]
+}
