@@ -52,7 +52,7 @@
 	}
 
 	// browser global
-	else if (global.Ractive) {
+	else if (global.Ractive && global.jQuery) {
 		factory(global.Ractive, global.jQuery);
 	} else {
 		throw new Error('Could not find Ractive! It must be loaded before the ractive-events-ractive-events-bootstraptags plugin');
